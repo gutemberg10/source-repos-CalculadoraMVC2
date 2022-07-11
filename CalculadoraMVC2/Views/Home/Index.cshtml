@@ -1,0 +1,20 @@
+﻿@model CalculadoraMVC2.Models.Calculadora
+@{
+    ViewData["Title"] = "Home Page";
+}
+  <form asp-action="Index" style="color:darkblue">
+     <div class="text-center">
+         <h1 class="display-4">Calculadora</h1>        
+         <p><label>Numero 1</label></p>
+         <p><input type="number" asp-for="Num1" /></p>
+         <p><label>Numero 2</label></p>
+         <p><input type="number" asp-for="Num2" /></p>
+         
+         <p><input type="submit" class="btn btn-info" value="    somar    " asp-for="Operador" /></p>
+         <p><input type="submit" class="btn btn-danger" value="   subtrair   " asp-for="Operador" /></p>
+         <p><input type="submit" class="btn btn-warning" value=" multiplicar " asp-for="Operador" /></p>
+         <p><input type="submit" class="btn btn-secondary" value="     dividir     " asp-for="Operador" /></p>
+         <p><label>Resultado</label></p>
+         <p><input type="number" asp-for="@ViewData["result"]" /></p>
+     </div>
+  </form>
